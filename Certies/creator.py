@@ -1,6 +1,11 @@
 #!/bin/python
-
 import os
+try:
+	os.mkdir("DONE")
+	os.mkdir("SVGS")
+except :
+	pass
+
 with open("names.txt") as f :
 	for postName in f.readlines() :
 		post, name = postName.strip('\n').split(' - ')
